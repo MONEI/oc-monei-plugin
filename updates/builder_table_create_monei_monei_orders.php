@@ -23,7 +23,7 @@ class BuilderTableCreateMoneiMoneiOrders extends Migration
             $table->timestamps();
         });
     }
-
+    
     public function down()
     {
         Schema::dropIfExists('monei_monei_orders');

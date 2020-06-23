@@ -1,4 +1,4 @@
-<?php namespace MONEI\MONEI\Classes;
+<?php namespace MONEI\MONEI\Classes\Contracts;
 
 
 interface GatewayInterface

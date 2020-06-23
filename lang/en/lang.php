@@ -61,6 +61,30 @@ return [
             'label' => 'Password',
             'comment' => 'MONEI Password',
         ],
+        'id' => [
+            'label' => 'Order ID',
+        ],
+        'first_name' => [
+            'label' => 'First Name',
+        ],
+        'last_name' => [
+            'label' => 'Last Name',
+        ],
+        'total' => [
+            'label' => 'Total',
+        ],
+        'payment_date' => [
+            'label' => 'Payment Date',
+        ],
+        'payment_status' => [
+            'label' => 'Payment Status',
+        ],
+        'payment_status_msg' => [
+            'label' => 'Payment Status Message',
+        ],
+        'checkout_id' => [
+            'label' => 'Checkout ID',
+        ],
     ],
     'tabs' => [
         'general' => 'General',

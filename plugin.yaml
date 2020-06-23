@@ -1,6 +1,17 @@
 plugin:
     name: 'monei.monei::lang.plugin.name'
     description: 'monei.monei::lang.plugin.description'
-    author: 'MONEI'
+    author: MONEI
     icon: oc-usd
     homepage: 'https://monei.net/'
+permissions:
+    monei.orders:
+        tab: 'monei.monei::lang.plugin.name'
+        label: 'monei.monei::lang.permissions.orders'
+navigation:
+    main-menu-monei:
+        label: 'monei.monei::lang.plugin.name'
+        url: monei/monei/orders
+        icon: icon-cart-plus
+        permissions:
+            - monei.orders

@@ -1,0 +1,10 @@
+name: Orders
+form: $/monei/monei/models/order/fields.yaml
+modelClass: MONEI\MONEI\Models\Order
+defaultRedirect: monei/monei/orders
+create:
+    redirect: 'monei/monei/orders/update/:id'
+    redirectClose: monei/monei/orders
+update:
+    redirect: monei/monei/orders
+    redirectClose: monei/monei/orders

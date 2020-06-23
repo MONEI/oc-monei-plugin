@@ -4,23 +4,20 @@
 
 columns:
     id:
-        label: Order ID
-        searchable: true
-    transaction_id:
-        label: Transaction ID
+        label: monei.monei::lang.fields.id.label
         searchable: true
     first_name:
-        label: First Name
+        label: monei.monei::lang.fields.first_name.label
         searchable: true
     last_name:
-        label: Last Name
+        label: monei.monei::lang.fields.last_name.label
         searchable: true
     total:
-        label: Total
+        label: monei.monei::lang.fields.total.label
         searchable: true
     payment_status:
-        label: Payment Status
+        label: monei.monei::lang.fields.payment_status.label
         searchable: true
-    order_date:
-        label: Order Date
+    payment_date:
+        label: monei.monei::lang.fields.payment_date.label
         searchable: true

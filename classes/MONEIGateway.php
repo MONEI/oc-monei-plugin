@@ -2,8 +2,8 @@
 
 use Carbon\Carbon;
 use Cms;
+use MONEI\MONEI\Classes\Contracts\GatewayInterface;
 use MONEI\MONEI\Models\Order;
-use October\Rain\Support\Traits\Singleton;
 use Lang;
 
 class MONEIGateway implements GatewayInterface
@@ -26,9 +26,6 @@ class MONEIGateway implements GatewayInterface
 
     /** @var bool */
     public $bDebug;
-
-    /** @var string */
-    public $id = 'monei';
 
     /**
      * Constructor for the gateway.
@@ -236,12 +233,12 @@ class MONEIGateway implements GatewayInterface
                 Helper::logLine('Date: ' . $obDateCarbon->format('Y-m-d H:i:s'));
             }
 
-            if (!empty($arData['monei_order_id'])) {
-                $obOrder->monei_order_id = $arData['monei_order_id'];
-            }
-
             if (!empty($date)) {
                 $obOrder->payment_date = $obDateCarbon;
+            }
+
+            if (!empty($arData['checkout_id'])) {
+                $obOrder->checkout_id = $arData['checkout_id'];
             }
 
             // Payment completed.
