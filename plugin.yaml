@@ -1,0 +1,6 @@
+plugin:
+    name: 'monei.monei::lang.plugin.name'
+    description: 'monei.monei::lang.plugin.description'
+    author: 'MONEI'
+    icon: oc-usd
+    homepage: 'https://monei.net/'

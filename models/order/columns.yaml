@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: Order ID
+        searchable: true
+    transaction_id:
+        label: Transaction ID
+        searchable: true
+    first_name:
+        label: First Name
+        searchable: true
+    last_name:
+        label: Last Name
+        searchable: true
+    total:
+        label: Total
+        searchable: true
+    payment_status:
+        label: Payment Status
+        searchable: true
+    order_date:
+        label: Order Date
+        searchable: true

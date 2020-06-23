@@ -1,0 +1,6 @@
+<form action="{{ MONEIPaymentForm.getUrl() }}?" method="post" id="monei_payment_form" target="_top">
+    {{ MONEIPaymentForm.getHiddenInputs(order)|raw }}
+    <button type="submit" class="btn btn-success" id="submit_monei_payment_form">Pay with Credit Card via MONEI</button>
+</form>
+
+<a class="button cancel" href="{{ MONEIPaymentForm.getCancelUrl() }}">Cancel order &amp; restore cart</a>

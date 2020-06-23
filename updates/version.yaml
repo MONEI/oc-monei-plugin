@@ -1,0 +1,4 @@
+1.0.0: 'Initialize plugin'
+1.0.1:
+    - 'Created table monei_monei_orders'
+    - builder_table_create_monei_monei_orders.php

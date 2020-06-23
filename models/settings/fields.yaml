@@ -1,0 +1,98 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    is_enabled:
+        label: monei.monei::lang.fields.is_enabled.label
+        span: auto
+        comment: monei.monei::lang.fields.is_enabled.comment
+        type: switch
+        tab: monei.monei::lang.tabs.general
+    is_test_mode:
+        label: monei.monei::lang.fields.is_test_mode.label
+        span: auto
+        comment: monei.monei::lang.fields.is_test_mode.comment
+        type: switch
+        tab: monei.monei::lang.tabs.general
+    is_debug_mode:
+        label: monei.monei::lang.fields.is_debug_mode.label
+        span: auto
+        comment: monei.monei::lang.fields.is_debug_mode.comment
+        type: switch
+        tab: monei.monei::lang.tabs.general
+
+tabs:
+    fields:
+        account_id:
+            label: monei.monei::lang.fields.account_id.label
+            span: auto
+            comment: monei.monei::lang.fields.account_id.comment
+            tab: monei.monei::lang.tabs.info
+        secret:
+            label: monei.monei::lang.fields.secret.label
+            span: auto
+            comment: monei.monei::lang.fields.secret.comment
+            tab: monei.monei::lang.tabs.info
+        password:
+            label: monei.monei::lang.fields.password.label
+            span: auto
+            comment: monei.monei::lang.fields.password.comment
+            tab: monei.monei::lang.tabs.info
+        shop_name:
+            label: monei.monei::lang.fields.shop_name.label
+            span: auto
+            comment: monei.monei::lang.fields.shop_name.comment
+            tab: monei.monei::lang.tabs.info
+        url_callback:
+            label: monei.monei::lang.fields.url_callback.label
+            span: auto
+            comment: monei.monei::lang.fields.url_callback.comment
+            tab: monei.monei::lang.tabs.info
+
+
+        title:
+            label: monei.monei::lang.fields.title.label
+            span: auto
+            comment: monei.monei::lang.fields.title.comment
+            tab: monei.monei::lang.tabs.info
+        description:
+            label: monei.monei::lang.fields.description.label
+            span: auto
+            comment: monei.monei::lang.fields.description.comment
+            tab: monei.monei::lang.tabs.info
+        logo:
+            label: monei.monei::lang.fields.logo.label
+            span: auto
+            comment: monei.monei::lang.fields.logo.comment
+            tab: monei.monei::lang.tabs.info
+            type: fileupload
+            mode: image
+
+        #orderdo:
+        #    label: monei.monei::lang.fields.orderdo.label
+        #    span: auto
+        #    comment: monei.monei::lang.fields.orderdo.comment
+        #    tab: monei.monei::lang.tabs.info
+        #    type: dropdown
+        #    options:
+        #        processing: monei.monei::lang.fields.orderdo.options.processing
+        #        completed: monei.monei::lang.fields.orderdo.options.completed
+        currency:
+            label: monei.monei::lang.fields.currency.label
+            span: auto
+            comment: monei.monei::lang.fields.currency.comment
+            tab: monei.monei::lang.tabs.info
+            type: dropdown
+            options:
+                EUR: EUR
+                USD: USD
+                GBP: GBP
+
+        #order_class:
+        #    label: monei.monei::lang.fields.order_class.label
+        #    span: auto
+        #    comment: monei.monei::lang.fields.order_class.comment
+        #    placeholder: MONEI\MONEI\Models\Order
+        #    default: MONEI\MONEI\Models\Order
+        #    tab: monei.monei::lang.tabs.info

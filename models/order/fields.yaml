@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        #label: Order ID
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    transaction_id:
+        #label: Transaction ID
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    first_name:
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    last_name:
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    total:
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    payment_status:
+        #label: Payment Status
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    payment_status_msg:
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    order_date:
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    payment_date:
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
+    monei_order_id:
+        label: monei.monei::lang.fields.monei_order_id
+        span: auto
