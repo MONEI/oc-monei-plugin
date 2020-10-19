@@ -1,16 +1,13 @@
 <?php namespace MONEI\MONEI\Classes;
 
 
+use GuzzleHttp\RequestOptions;
+
 class Helper
 {
+    const EVENT_PAYMENT_AFTER_PAY = 'monei.payment.after_pay';
     const EVENT_URL_CALLBACK = 'monei.url.callback';
-
-//    public static function getOrderIdByFullId($sOrderIdFull)
-//    {
-//        $iOrderId  = (int) substr($sOrderIdFull, 3); // cojo los 9 digitos del final.
-//
-//        return $iOrderId;
-//    }
+    const EVENT_URL_CALLBACK_REFUND = 'monei.url.callback_refund';
 
     public static function log($arData = [])
     {
@@ -31,5 +28,28 @@ class Helper
         }
 
         trace_log($sLine);
+    }
+
+    public static function sendRequest($sUrl, $arData = [])
+    {
+        $client = new \GuzzleHttp\Client();
+
+        $response = $client->post($sUrl, [
+            RequestOptions::JSON => $arData,
+        ]);
+
+// url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
+
+        $statusCode = $response->getStatusCode();
+        $content = $response->getBody();
+
+// or when your server returns json
+// $content = json_decode($response->getBody(), true);
+
+        if ($statusCode == 200) {
+            return $content;
+        } else {
+            throw new \Exception("error request to MONEI");
+        }
     }
 }

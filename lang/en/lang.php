@@ -15,7 +15,7 @@ return [
         ],
         'is_debug_mode' => [
             'label' => 'Debug Mode enabled',
-            'comment' => 'Log MONEY events, such as notifications requests.',
+            'comment' => 'Log MONEI events, such as notifications requests.',
         ],
         'title' => [
             'label' => 'Title',
@@ -30,8 +30,10 @@ return [
             'comment' => 'Upload image logo.',
         ],
         'shop_name' => [
-            'label' => 'Shop Name',
-            'comment' => 'Your Shop Name',
+            'label' => 'Shop Name'
+        ],
+        'order_data' => [
+            'label' => 'Order Data',
         ],
         'url_callback' => [
             'label' => 'URL Callback',
@@ -57,21 +59,23 @@ return [
             'label' => 'Currency',
             'comment' => 'Currencies available',
         ],
-        'password' => [
-            'label' => 'Password',
-            'comment' => 'MONEI Password',
-        ],
         'id' => [
             'label' => 'Order ID',
         ],
-        'first_name' => [
-            'label' => 'First Name',
+        'order_id_full' => [
+            'label' => 'Order ID',
         ],
-        'last_name' => [
-            'label' => 'Last Name',
+        'name' => [
+            'label' => 'Name',
         ],
-        'total' => [
+        'email' => [
+            'label' => 'E-mail',
+        ],
+        'total_full' => [
             'label' => 'Total',
+        ],
+        'created_at' => [
+            'label' => 'Created at',
         ],
         'payment_date' => [
             'label' => 'Payment Date',
@@ -82,8 +86,28 @@ return [
         'payment_status_msg' => [
             'label' => 'Payment Status Message',
         ],
-        'checkout_id' => [
-            'label' => 'Checkout ID',
+        'transaction_id' => [
+            'label' => 'Transaction ID',
+        ],
+        'refund_btn' => [
+            'label' => 'Make Refund',
+        ],
+        'refunds' => [
+            'label' => 'Refunds',
+        ],
+        'amount' => [
+            'label' => 'Amount',
+        ],
+        'date' => [
+            'label' => 'Date',
+        ],
+        'api_key' => [
+            'label' => 'API Key',
+            'comment' => 'API Key for production use',
+        ],
+        'api_key_test' => [
+            'label' => 'Test API Key',
+            'comment' => 'API Key for testing',
         ],
     ],
     'tabs' => [
@@ -106,6 +130,20 @@ return [
             'url_cancel' => [
                 'title' => 'Cancel Page',
                 'description' => 'URL to which customers must be redirected when they wish to quit payment flow and return to the merchant\'s site.',
+            ],
+            'url_complete' => [
+                'title' => 'Complete Page',
+                'description' => 'URL to which customers must be redirected after payment is completed.',
+            ],
+        ],
+        'success_page' => [
+            'details' => [
+                'name' => 'MONEI Order Success Page',
+                'description' => 'Receive order success data and display order info.',
+            ],
+            'order_id' => [
+                'title' => 'Order ID',
+                'description' => 'To get Order object.',
             ],
         ],
     ],

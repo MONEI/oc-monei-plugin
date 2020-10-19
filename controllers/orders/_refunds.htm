@@ -1,0 +1,58 @@
+<div>
+    <div class="loading control-popup modal fade in" style="display: none">
+        <div class="modal-dialog size-large" style="transform: inherit;">
+            <div class="modal-content">
+                <div style="text-align: center; padding: 50px">
+                    Refunding, please wait...
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-html"></div>
+
+    <?php if (is_array($this->vars['formModel']->getRefunds()) && count($this->vars['formModel']->getRefunds())): ?>
+        <h4>Refunds</h4>
+        <table class="table">
+            <?php $i = 1; foreach($this->vars['formModel']->getRefunds() as $refund):?>
+            <tr>
+                <td>
+                    <?=date('F j, Y H:i', strtotime($refund['date']))?>
+                </td>
+                <td>
+                    <?=$refund['amount'] / 100?> <?=$this->vars['formModel']->currency?>
+                </td>
+            </tr>
+            <?php $i++; endforeach; ?>
+        </table>
+    <?php endif;?>
+    <h4>Statistics</h4>
+    <table class="table">
+        <tr>
+            <td>Total refunded:</td>
+            <td><?=$this->vars['formModel']->RefundedTotal / 100?> <?=$this->vars['formModel']->currency?></td>
+        </tr>
+        <?php if ($this->vars['formModel']->isRefundable):?>
+        <tr>
+            <td>Available to refund:</td>
+            <td><?=$this->vars['formModel']->RefundAvailable / 100?> <?=$this->vars['formModel']->currency?></td>
+        </tr>
+        <?php endif;?>
+    </table>
+</div>
+
+<?php if ($this->vars['formModel']->isRefundable):?>
+<?php if ($this->vars['formModel']->RefundedTotal <= $this->vars['formModel']->total):?>
+<div>
+    <a
+            href="javascript:;"
+            class="btn btn-default"
+            data-control="popup"
+            data-size="large"
+            data-handler="onRefundOpen"
+            data-request-data="order_id: <?=$this->vars['formModel']->id?>"
+            data-load-indicator="Loading...">
+        Make refund
+    </a>
+</div>
+<?php endif;?>
+<?php endif;?>

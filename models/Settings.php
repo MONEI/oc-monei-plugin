@@ -2,6 +2,7 @@
 
 use Model;
 use System\Models\File;
+use Cms\Classes\Page;
 
 class Settings extends Model
 {
@@ -27,7 +28,6 @@ class Settings extends Model
 
     public function configArray()
     {
-        $instance = self::instance();
         $out = [];
         $arFields = $this->getFieldConfig()->fields;
         $arFields = array_keys(array_merge($arFields, $this->getFieldConfig()->tabs['fields']));
@@ -36,8 +36,16 @@ class Settings extends Model
             $out[$sField] = self::get($sField);
         }
 
-        //$instance->config = $out;
-
         return $out;
+    }
+
+    public function getUrlCancelOptions()
+    {
+        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
+    }
+
+    public function getUrlCompleteOptions()
+    {
+        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 }

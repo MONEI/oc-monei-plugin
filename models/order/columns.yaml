@@ -3,20 +3,25 @@
 # ===================================
 
 columns:
-    id:
-        label: monei.monei::lang.fields.id.label
+    order_id_full:
+        label: monei.monei::lang.fields.order_id_full.label
         searchable: true
-    first_name:
-        label: monei.monei::lang.fields.first_name.label
+    total_full:
+        label: monei.monei::lang.fields.total_full.label
         searchable: true
-    last_name:
-        label: monei.monei::lang.fields.last_name.label
-        searchable: true
-    total:
-        label: monei.monei::lang.fields.total.label
-        searchable: true
+        select: CONCAT(total, ' ', currency)
     payment_status:
         label: monei.monei::lang.fields.payment_status.label
+        searchable: true
+        default: PENDING
+    name:
+        label: monei.monei::lang.fields.name.label
+        searchable: true
+    email:
+        label: monei.monei::lang.fields.email.label
+        searchable: true
+    created_at:
+        label: monei.monei::lang.fields.created_at.label
         searchable: true
     payment_date:
         label: monei.monei::lang.fields.payment_date.label

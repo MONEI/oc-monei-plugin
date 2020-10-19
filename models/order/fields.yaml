@@ -3,25 +3,9 @@
 # ===================================
 
 fields:
-    first_name:
-        label: monei.monei::lang.fields.first_name.label
+    order_data:
         span: auto
-    last_name:
-        label: monei.monei::lang.fields.last_name.label
+        type: partial
+    refunds:
         span: auto
-    total:
-        label: monei.monei::lang.fields.total.label
-        span: auto
-    payment_status:
-        label: monei.monei::lang.fields.payment_status.label
-        span: auto
-    payment_status_msg:
-        label: monei.monei::lang.fields.payment_status_msg.label
-        span: auto
-    payment_date:
-        label: monei.monei::lang.fields.payment_date.label
-        span: auto
-        type: datepicker
-    checkout_id:
-        label: monei.monei::lang.fields.checkout_id.label
-        span: auto
+        type: partial

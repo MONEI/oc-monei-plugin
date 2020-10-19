@@ -1,0 +1,22 @@
+<div class="refund-error control-popup modal fade in" style="display: block">
+    <div class="modal-dialog size-large" style="transform: inherit;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="popup">×</button>
+                <h4 class="modal-title">Refund error</h4>
+            </div>
+            <div style="text-align: center; padding: 50px">
+                <h4>Refunding failed. Try again</h4>
+            </div>
+            <div style="text-align: center; padding: 50px">
+                Check if you've exceeded refunding amount or specified amount bigger than total order amount or entered amount in wrong format.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.close').click(function () {
+        $('.refund-error').remove();
+    });
+</script>

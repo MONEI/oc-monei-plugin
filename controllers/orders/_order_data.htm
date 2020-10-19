@@ -1,0 +1,45 @@
+<div>
+    <h4>Order Data</h4>
+    <table class="table">
+    <tr>
+        <td>Transaction ID:</td>
+        <td><?=$this->vars['formModel']->transaction_id ?: '-'?></td>
+    </tr>
+    <tr>
+        <td>Order ID:</td>
+        <td><?=$this->vars['formModel']->order_id_full?></td>
+    </tr>
+    <tr>
+        <td>Amount:</td>
+        <td><?=$this->vars['formModel']->total_full?></td>
+    </tr>
+    <tr>
+        <td>Payment Status:</td>
+        <td><?=$this->vars['formModel']->payment_status ?: 'PENDING'?></td>
+    </tr>
+    <tr>
+        <td>Payment Status Message:</td>
+        <td><?=$this->vars['formModel']->payment_status_msg ?: '-'?></td>
+    </tr>
+    <tr>
+        <td>Payment Date:</td>
+        <td><?=$this->vars['formModel']->payment_date ? $this->vars['formModel']->payment_date->format('F j, Y H:i') : '-'?></td>
+    </tr>
+    <tr>
+        <td>Customer Name:</td>
+        <td><?=$this->vars['formModel']->name?></td>
+    </tr>
+    <tr>
+        <td>Customer E-mail:</td>
+        <td><?=$this->vars['formModel']->email?></td>
+    </tr>
+    <tr>
+        <td>Customer Phone:</td>
+        <td><?=$this->vars['formModel']->phone?></td>
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td><?=$this->vars['formModel']->description ?: '-'?></td>
+    </tr>
+    </table>
+</div>
